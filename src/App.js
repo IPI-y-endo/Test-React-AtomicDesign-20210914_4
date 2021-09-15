@@ -1,6 +1,11 @@
 import { Router } from "./router/Router";
 import "./styles.css";
+import { UserProvider } from "./providers/UserProvider";
 
 export default function App() {
-  return <Router />;
+  return (
+    <UserProvider>
+      <Router />
+    </UserProvider>
+  );
 }
